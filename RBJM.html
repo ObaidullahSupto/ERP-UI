@@ -1,0 +1,67 @@
+<html>          
+	<head>
+       
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+         <title>Log In Page</title>
+         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+         <link rel="stylesheet" type="text/css" href="assets/css/style.css">  
+         <script src="assets/js/jquery-3.3.1.min.js"></script>
+         <script src="assets/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+         <link rel="shortcut icon" type="image/x-icon" href="assets/img/font.png" />
+
+         <script type="text/javascript">
+             
+             function login_section_function()
+             {
+                 document.getElementById('login_section').style.display = "block";
+             }
+             
+             function validateForm()
+             {
+                 var userName = document.forms["login_form"]["userName"].value;
+                 var passWord = document.forms["login_form"]["passWord"].value;
+                 
+                 if(userName != "admin" && passWord != "admin")
+                     {
+                         alert("Please login with correct information");
+                         return false;
+                     }
+             }
+         </script>
+     </head>
+     
+     <body style="background-color: #ffffff">
+	       <nav class="navbar navbar-default "style="background-color: #7986cb   ;" >
+	            <div class="container-fluid">
+	                <div class="navbar-header">
+	                    <a class="navbar-brand" href="#" style="color: white;">Rupali Bangla Jute Mills Ltd.</a>
+	                </div>
+	            </div>
+	        </nav>
+                
+                <div class="container" id="login_section" style="display: block; background-color: #ffffff;padding:20px;margin-top:100px;">
+                    <div class="container">
+    					<div class="row">
+    						<div class="login">
+    							<form class="login-container" action="requisition.html" method="GET" name="login_form" onsubmit="return validateForm()" >
+    							<div class="login-triangle"></div>
+    							  <h2 class="login-header">Log In</h2>
+    							    <p><input class="form-control" type="text" id="teacher_user_name" name="userName" required placeholder="User Name"></p>
+    							    <p><input class="form-control" type="password" id="teacher_password" name="passWord" required placeholder="Password"></p>
+    							    <p><input  type="submit" value="Submit"></p>
+    							</form>
+    						</div>
+    					</div>
+    				</div>            
+                </div>
+     <footer class="page-footer font-small blue" style="position: fixed; left: 0; bottom: 0; width: 100%; background-color:#7986cb   ; color: white; text-align: center;margin-top:20px;">
+        <div class="footer-copyright text-center py-3">
+            &copyCopyright 2018 | <a href="http://www.bimee.com.bd/" target="blank" style="color: #fff">BiMee</a>
+        </div>
+    </footer>
+
+            </body>
+        </html>
+
